@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<title>Site Cloner</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🌐</div>
+      <div>
+        <h1>Site Cloner</h1>
+        <p class="sub">Full website download karo — HTML, CSS, JS, images</p>
+      </div>
+    </header>
+
+    <div class="url-box" id="currentUrl">–</div>
+
+    <div class="options">
+      <label class="opt">
+        <input type="checkbox" id="optAssets" checked />
+        <span>Images / Fonts / Media download karo</span>
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="optCss" checked />
+        <span>CSS files (linked stylesheets)</span>
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="optJs" checked />
+        <span>JS files (scripts)</span>
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="optCrawl" />
+        <span>Same-domain internal links bhi crawl karo (multi-page)</span>
+      </label>
+      <div class="depth-row" id="depthRow" style="display:none;">
+        <span>Max pages:</span>
+        <input type="number" id="maxPages" value="10" min="1" max="100" />
+      </div>
+    </div>
+
+    <button id="cloneBtn" class="clone-btn">
+      <span id="btnText">🕸️ Is Site ko Clone Karo</span>
+    </button>
+
+    <button id="openTabBtn" class="tab-btn">🗔 Full Tab me Kholo</button>
+
+    <div id="progressWrap" class="progress-wrap" style="display:none;">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <div id="progressText" class="progress-text">Shuru ho raha hai...</div>
+    </div>
+
+    <div id="log" class="log"></div>
+
+    <footer>
+      <span>Clone shuru hone ke baad tab navigate/band kar sakte ho — background me chalta rahega</span>
+      <div class="brand-credit">Made with ❤️ by <strong>Hostopy</strong></div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

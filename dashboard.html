@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<title>Site Cloner - Dashboard</title>
+<link rel="icon" href="icons/icon48.png" />
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">🌐</div>
+      <div>
+        <h1>Site Cloner</h1>
+        <p class="sub">Full tab mode — background me chalta rahega, chahe ye tab bhi band kar do</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <label class="field-label">Kaunsa tab clone karna hai?</label>
+      <select id="tabSelect" class="tab-select"></select>
+      <button id="refreshTabs" class="mini-btn">🔄 Refresh list</button>
+    </div>
+
+    <div class="card">
+      <div class="options">
+        <label class="opt">
+          <input type="checkbox" id="optAssets" checked />
+          <span>Images / Fonts / Media download karo</span>
+        </label>
+        <label class="opt">
+          <input type="checkbox" id="optCss" checked />
+          <span>CSS files (linked stylesheets)</span>
+        </label>
+        <label class="opt">
+          <input type="checkbox" id="optJs" checked />
+          <span>JS files (scripts)</span>
+        </label>
+        <label class="opt">
+          <input type="checkbox" id="optCrawl" />
+          <span>Same-domain internal links bhi crawl karo (multi-page)</span>
+        </label>
+        <div class="depth-row" id="depthRow" style="display:none;">
+          <span>Max pages:</span>
+          <input type="number" id="maxPages" value="10" min="1" max="100" />
+        </div>
+      </div>
+    </div>
+
+    <button id="cloneBtn" class="clone-btn">
+      <span id="btnText">🕸️ Selected Tab ko Clone Karo</span>
+    </button>
+
+    <div id="progressWrap" class="progress-wrap" style="display:none;">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <div id="progressText" class="progress-text">Shuru ho raha hai...</div>
+    </div>
+
+    <div class="card log-card">
+      <div class="field-label">Activity Log</div>
+      <div id="log" class="log"></div>
+    </div>
+
+    <footer>
+      <span>Clone shuru hone ke baad tab navigate/band kar sakte ho — ZIP background me ban kar Downloads folder me save ho jayegi</span>
+      <div class="brand-credit">Made with ❤️ by <strong>Hostopy</strong></div>
+    </footer>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

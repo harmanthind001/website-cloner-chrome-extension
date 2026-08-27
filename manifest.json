@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Site Cloner - Full Website Downloader",
+  "version": "1.0.0",
+  "author": "Hostopy",
+  "description": "Kisi bhi website ka poora clone (HTML, CSS, JS, images, fonts) ek click me download karo. Developed by Hostopy.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage",
+    "notifications",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Site Cloner"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["libs/jszip.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
